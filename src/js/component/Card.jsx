@@ -3,7 +3,7 @@ import React from "react";
 
 function Card(props) {
     return (
-        <div className="col-md-3 d-flex justify-content-center mb-4">
+        <div className="col d-flex justify-content-center mb-4">
             <div className="card text-center" style={{ width: '18rem' }} >
                 <img src="https://via.placeholder.com/500x325" className="card-img-top" alt="..." />
                 <div className="card-body">
