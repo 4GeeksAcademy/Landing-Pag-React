@@ -6,31 +6,27 @@ import Card from "./Card";
 import Footer from "./Footer";
 
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
+	let titulos = [{ titulo: "Card title 1", descripcion: "Lorem1 ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam unde" }, { titulo: "Card title 2", descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam unde" }, { titulo: "Card title 3", descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam unde" }, { titulo: "Card title 4", descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam unde" }
+	]
+
 	return (
 		<div>
 			<NavBar />
 			<Jumbotron />
-			<div className="container">
-				<div className="row my-5 p-0">
-					<div className="col pr-0">
-						<Card />
-					</div>
-					<div className="col">
-						<Card />
-					</div>
-					<div className="col">
-						<Card />
-					</div>
-					<div className="col">
-						<Card />
-					</div>
-				</div>
-
+			<div className="row">
+				{titulos.map((item, index) => (<Card key={index} titulo={item.titulo} descripcion={item.descripcion} />))}
+				{/* <div className="col d-flex justify-content-center">
+				<Card />
+			</div>
+			<div className="col d-flex justify-content-center">
+				<Card />
+			</div>
+			<div className="col d-flex justify-content-center">
+				<Card />
+			</div> */}
 			</div>
 
 			<Footer />
