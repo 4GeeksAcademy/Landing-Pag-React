@@ -18,8 +18,9 @@ const Home = () => {
 			<Jumbotron />
 			<div className="row">
 				{titulos.map((item, index) => (<Card key={index} titulo={item.titulo} descripcion={item.descripcion} />))}
-				{/* se optmizo */}
-				{/* <div className="col d-flex justify-content-center">
+			</div>
+			{/* se optmizó */}
+			{/* <div className="col d-flex justify-content-center">
 				<Card />
 			</div>
 			<div className="col d-flex justify-content-center">
@@ -28,7 +29,6 @@ const Home = () => {
 			<div className="col d-flex justify-content-center">
 				<Card />
 			</div> */}
-			</div>
 			<Footer />
 		</div>
 	);
